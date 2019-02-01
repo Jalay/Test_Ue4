@@ -1,0 +1,20 @@
+flat volumeA = 0.0;
+volume = MinTo + (MaxTO - MinTo) * ((SliceHeight - MinFrom) / (MaxFrom - MinFrom));
+return volumeA;
+MinTo = minimum value between 0 and 1 that we want to map
+MaxTo = maximum value between 0 and 1 that we want to map
+MinFrom = minimum height value. Typically the seed plane height in world space.
+MaxFrom - the maximum slice height set by our blueprint
+SliceHeight = the height of the current slice (BP)
+
+(200 - 0) / (256 - 0); = .78
+
+.78 * (1 - 0) + 0;
+
+or
+
+(200 - 10) / (256 - 10); = 190 / 246
+
+.77 * (1 - .2) + .2;
+
+.81
